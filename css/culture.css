@@ -316,22 +316,22 @@ header img {
     animation: slider 30s ease-in-out infinite alternate;
 }
 .slider #slider-img-1 {
-    background-image: url('../images/Pad-Thai.jpg');
+    background-image: url('../Images/Pad-Thai.jpg');
     background-position: center;
     background-size: cover;
 }
 .slider #slider-img-2 {
-    background-image: url('../images/tom-yum.jpg');
+    background-image: url('../Images/tom-yum.jpg');
     background-position: center;
     background-size: cover;
 }
 .slider #slider-img-3 {
-    background-image: url('../images/green-curry.avif');
+    background-image: url('../Images/green-curry.avif');
     background-position: center;
     background-size: cover;
 }
 .slider #slider-img-4 {
-    background-image: url('../images/sticky-rice.webp');
+    background-image: url('../Images/sticky-rice.webp');
     background-position: center;
     background-size: cover;
 }
