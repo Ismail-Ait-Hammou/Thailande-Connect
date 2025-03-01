@@ -1,0 +1,533 @@
+/* Général */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Roboto" , serif;
+}
+
+body {
+    background: #fefefe;
+}
+
+/* start NavBar */
+header {
+    width: 100%;
+    height: 70px;
+    background: #fefefe;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+}
+
+header img {
+    height: 60px;
+}
+
+.hamburger {
+    display: none;
+}
+
+.nav-bar ul {
+    display: flex;
+}
+
+.nav-bar ul li a {
+    display: block;
+    color: #00247D;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: 0.2s;
+    margin: 0 5px;
+}
+
+.nav-bar ul li a:hover {
+    color: #fefefe;
+    background: #00247D;
+}
+
+.nav-bar ul li a.active {
+    color: #fefefe;
+    background: #00247D;
+}
+
+@media only screen and (max-width: 1320px) {
+    header {
+        padding: 0 50px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    header {
+        padding: 0 30px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger .line {
+        width: 30px;
+        height: 3px;
+        background: #00247D;
+        margin: 6px 0;
+    }
+    .nav-bar {
+        height: 0;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background: #fefefe;
+        transition: 0.2s;
+        overflow: hidden;
+        z-index: 10;
+    }
+    .nav-bar.active {
+        height: 450px ;
+    }
+    .nav-bar ul {
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+    }
+    .nav-bar.active ul {
+        opacity: 1;
+    }
+    .nav-bar ul li a {
+        margin-bottom: 12px;
+    }
+}
+/* end NavBar */
+
+/* start title Section */
+.title-section {
+    background-color: #fefefe;
+    padding: 48px 16px;
+    text-align: center;
+    border-bottom: 2px solid #FFD700;
+}
+
+.title-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-title {
+    font-size: 40px;
+    font-weight: bold;
+    color: #00247D;
+    margin-bottom: 8px;
+    font-family: "Lora" , serif;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #333;
+    margin-top: 0;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .main-title {
+    font-size: 32px;
+    }
+
+    .subtitle {
+    font-size: 16px;
+    }
+}
+
+.title-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.title-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* end title Section */
+/* start Section services consulaires */
+.services-section {
+    background-color: #fefefe;
+    padding: 48px 16px;
+    text-align: center;
+    border-bottom: 2px solid #FFD700;
+}
+
+.services-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 38px;
+    font-weight: bold;
+    font-family: "Lora" , serif;
+    color: #00247D;
+    margin-bottom: 16px;
+}
+
+.intro-text {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 40px;
+    line-height: 1.4;
+}
+
+.services-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+}
+
+.service-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+}
+
+.service-item i {
+    font-size: 32px;
+    color: #FFD700;
+    margin-bottom: 8px;
+}
+
+.service-item h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.service-item p {
+    font-size: 16px;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .services-list {
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .service-item {
+    width: 100%;
+    }
+}
+/* end Section services consulaires */
+/* start section relation economique */
+.economic-relations {
+    background-color: #fefefe;
+    padding: 48px 16px;
+    border-bottom: 2px solid #FFD700;
+}
+
+.economic-relations .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title-relation {
+    font-size: 36px;
+    font-family: "Lora" , serif;
+    color: #00247D;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.intro-text-relation {
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 36px;
+    line-height: 1.5;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.text-content h3 {
+    font-size: 28px;
+    color: #00247D;
+    margin-bottom: 20px;
+    font-family: "lora" , serif;
+}
+
+.initiatives-list {
+    list-style: none;
+    padding: 0;
+}
+
+.initiatives-list li {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.initiatives-list li i {
+    color: #FFD700;
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #00247D;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #004b99;
+}
+
+.image-content {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.image-content img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    .text-content, .image-content {
+        text-align: center;
+    }
+
+    .initiatives-list li {
+        justify-content: center;
+    }
+}
+/* end section relation economique */
+/* start section FAQ */
+.faq-section {
+    background-color: #fefefe;
+    padding: 48px 16px;
+}
+
+.section-title-faq {
+    text-align: center;
+    font-size: 36px;
+    font-family: "Lora" , serif;
+    color: #00247D;
+    margin-bottom: 16px;
+}
+
+.faq-intro {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.faq-intro a {
+    color: #00247D;
+    text-decoration: none;
+}
+
+.faq-accordion {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd;
+    padding: 16px 0;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.faq-question h3 {
+    font-size: 18px;
+    font-family: "Lora" , serif;
+    color: #333;
+    margin: 0;
+}
+
+.faq-toggle {
+    font-size: 24px;
+    color: #FFD700;
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    padding: 0 0;
+    color: #555;
+    line-height: 1.5;
+}
+
+.faq-item.open .faq-answer {
+    max-height: 80px;
+    padding: 10px 0;
+}
+
+.faq-item.open .faq-toggle {
+    transform: rotate(45deg);
+}
+
+@media (max-width: 768px) {
+    .faq-question h3 {
+        font-size: 16px;
+    }
+
+    .faq-toggle {
+        font-size: 20px;
+    }
+}
+/* end section FAQ */
+/* start Section : footer */
+.footer {
+    background-color: #00247D;
+    color: #ffffff;
+    padding: 16px 8px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    gap: 16px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 16px;
+    color: #fefefe;
+    text-transform: uppercase;
+}
+
+.footer-section p,
+.footer-section ul {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.footer-section a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 8px;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.social-icons a {
+    font-size: 24px;
+    color: #FFD700;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 16px;
+    border-top: 2px solid #FFD700;
+    padding-top: 8px;
+    font-size: 12px;
+}
+
+.footer-bottom a {
+    color: #FFD700;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin-bottom: 16px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+} 
+/* end Section : footer */
