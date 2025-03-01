@@ -1,0 +1,595 @@
+/* Général */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Roboto" , serif;
+}
+
+body {
+    background: #fefefe;
+}
+
+/* start NavBar */
+header {
+    width: 100%;
+    height: 70px;
+    background: #fefefe;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+}
+
+header img {
+    height: 60px;
+}
+
+.hamburger {
+    display: none;
+}
+
+.nav-bar ul {
+    display: flex;
+}
+
+.nav-bar ul li a {
+    display: block;
+    color: #00247D;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: 0.2s;
+    margin: 0 5px;
+}
+
+.nav-bar ul li a:hover {
+    color: #fefefe;
+    background: #00247D;
+}
+
+.nav-bar ul li a.active {
+    color: #fefefe;
+    background: #00247D;
+}
+
+@media only screen and (max-width: 1320px) {
+    header {
+        padding: 0 50px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    header {
+        padding: 0 30px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger .line {
+        width: 30px;
+        height: 3px;
+        background: #00247D;
+        margin: 6px 0;
+    }
+    .nav-bar {
+        height: 0;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background: #fefefe;
+        transition: 0.2s;
+        overflow: hidden;
+        z-index: 10;
+    }
+    .nav-bar.active {
+        height: 450px ;
+    }
+    .nav-bar ul {
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+    }
+    .nav-bar.active ul {
+        opacity: 1;
+    }
+    .nav-bar ul li a {
+        margin-bottom: 12px;
+    }
+}
+
+/* end NavBar */
+/* start Section Title */
+
+.about-title {
+    background-color: #fefefe;
+    padding: 32px 16px;
+    text-align: center;
+    border-bottom: 2px solid #FFD700;
+}
+
+.about-title .main-title {
+    font-size: 40px;
+    color: #00247D;
+    font-weight: bold;
+    font-family: "Lora" , serif;
+    margin-bottom: 8px;
+}
+
+.about-title .subtitle {
+    font-size: 18px;
+    color: #707070;
+    font-weight: 400;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+.about-title {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+.about-title.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .about-title .main-title {
+        font-size: 32px;
+    }
+
+    .about-title .subtitle {
+        font-size: 16px;
+        max-width: 90%;
+    }
+}
+
+/* end Section Title */
+/* start Section: Introduction à l'ambassade */
+.introduction-ambassade {
+    background-color: #fefefe;
+    padding: 48px 16px;
+    text-align: center;
+    border-bottom: 2px solid #FFD700;
+}
+
+.introduction-ambassade .section-title {
+    font-size: 32px;
+    color: #00247D;
+    font-family: "Lora" , serif;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.introduction-ambassade .intro-text {
+    font-size: 16px;
+    color: #707070;
+    line-height: 1.4;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.introduction-ambassade {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-in-out;
+}
+
+.introduction-ambassade.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .introduction-ambassade .section-title {
+        font-size: 28px;
+    }
+
+    .introduction-ambassade .intro-text {
+        font-size: 16px;
+        max-width: 90%;
+    }
+}
+/* end Section: Introduction à l'ambassade */
+/* start Section Mission et Objectifs */
+.mission-objectifs {
+    background-color: #fefefe;
+    padding: 56px 16px;
+    text-align: center;
+    border-bottom: 2px solid #FFD700;
+}
+
+.mission-objectifs .section-title {
+    font-size: 32px;
+    color: #00247D;
+    font-family: "Lora" , serif;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.mission-objectifs .mission-text {
+    font-size: 18px; 
+    color: #707070;
+    line-height: 1.5;
+    max-width: 800px; 
+    margin: 0 auto 32px auto;
+}
+
+.mission-objectifs .objectifs-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: left;
+}
+
+.mission-objectifs .objectifs-list li {
+    font-size: 16px;
+    color: #555; 
+    display: flex; 
+    align-items: center; 
+    margin-bottom: 16px; 
+}
+
+.mission-objectifs .objectifs-list li i.icon {
+    font-size: 24px; 
+    color: #FFD700; 
+    margin-right: 8px; 
+}
+
+@media (max-width: 768px) {
+    .mission-objectifs .section-title {
+        font-size: 28px;
+    }
+
+    .mission-objectifs .mission-text {
+        font-size: 16px; 
+    }
+
+    .mission-objectifs .objectifs-list li {
+        font-size: 14px;
+    }
+
+    .mission-objectifs .objectifs-list li i.icon {
+        font-size: 20px; 
+    }
+}
+
+.objectifs-list li {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease-in-out;
+}
+
+.objectifs-list li.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* end Section Mission et Objectifs */
+/* start Section Historique de l'Ambassade */
+.historique-ambassade {
+    background-color: #fefefe;
+    padding: 48px 16px;
+    text-align: center;
+    border-bottom: 2px solid #FFD700;
+}
+
+.historique-ambassade .section-title {
+    font-size: 32px;
+    color: #00247D;
+    margin-bottom: 16px;
+    font-weight: bold;
+    font-family: "Lora" , serif;
+}
+
+.historique-ambassade .historique-text {
+    font-size: 16px;
+    color: #707070;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto 32px auto;
+}
+
+.historique-ambassade .achievements {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.historique-ambassade .achievement-item {
+    background-color: #FDF5E6;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+    min-width: 250px;
+}
+
+.historique-ambassade .achievement-item .icon {
+    font-size: 32px;
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+.historique-ambassade .achievement-title {
+    font-size: 24px;
+    color: #00247D;
+    margin-bottom: 10px;
+    font-family: "Lora" , serif;
+}
+
+.historique-ambassade .achievement-item p {
+    font-size: 16px;
+    color: #000000;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .historique-ambassade .achievements {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .historique-ambassade .achievement-item {
+        min-width: 100%;
+    }
+
+    .historique-ambassade .section-title {
+        font-size: 28px;
+    }
+
+    .historique-ambassade .historique-text {
+        font-size: 16px;
+    }
+}
+
+/* end Section Historique de l'Ambassade */
+/* start Section Équipe */
+.team-structure {
+    background-color: #fefefe; /* Fond gris clair */
+    padding: 48px 16px;
+    text-align: center;
+    border-bottom: solid 2px #FFD700;
+}
+
+.team-structure .section-title {
+    font-size: 32px;
+    color: #00247D;
+    margin-bottom: 16px;
+    font-weight: bold;
+    font-family: "Lora" , serif;
+}
+
+.team-structure .section-description {
+    font-size: 18px;
+    color: #707070;
+    max-width: 800px;
+    margin: 0 auto 32px auto;
+    line-height: 1.5;
+}
+
+.team-structure .team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.team-structure .team-member {
+    background-color: #ffffff;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    padding: 16px;
+    text-align: center;
+    width: 224px;
+}
+
+.team-structure .team-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 8px;
+}
+
+.team-structure .team-name {
+    font-size: 18px;
+    color: #00247D;
+    margin-bottom: 4px;
+    font-weight: bold;
+}
+
+.team-structure .team-role {
+    font-size: 16px;
+    color: #FFD700; 
+    margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+    .team-structure .team-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-structure .team-member {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+/* end Section Équipe */
+/* start section : Valeurs et Engagement */
+.standard-section {
+    background-color: #fefefe;
+    padding: 48px 16px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 32px;
+    color: #00247D;
+    margin-bottom: 24px;
+    font-weight: bold;
+    font-family: "Lora" , serif;
+}
+
+
+.section-subtitle {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 24px;
+}
+
+.values-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.values-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.values-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    font-size: 16px;
+}
+
+.values-list i {
+    font-size: 24px;
+    color: #FFD700;
+    margin-right: 16px;
+}
+
+.values-list strong {
+    font-weight: bold;
+    color: #333;
+}
+
+.values-summary {
+    margin-top: 16px;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+}
+/* end section : Valeurs et Engagement */
+/* start Section : footer */
+.footer {
+    background-color: #00247D;
+    color: #ffffff;
+    padding: 16px 8px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    gap: 16px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 16px;
+    color: #fefefe;
+    text-transform: uppercase;
+}
+
+.footer-section p,
+.footer-section ul {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.footer-section a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 8px;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.social-icons a {
+    font-size: 24px;
+    color: #FFD700;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 16px;
+    border-top: 2px solid #FFD700;
+    padding-top: 8px;
+    font-size: 12px;
+}
+
+.footer-bottom a {
+    color: #FFD700;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin-bottom: 16px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+} 
+/* end Section : footer */
